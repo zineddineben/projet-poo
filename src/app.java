@@ -1,5 +1,5 @@
 import java.awt.EventQueue;
-import java.sql.*;
+
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
@@ -20,13 +20,12 @@ import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-//final boss assist 
+//final boss test
 
 
 public class app {
 	
-	private Connection connection;
-	private Statement statement;
+	
 
 	JFrame frame;
 	
@@ -52,15 +51,7 @@ public class app {
 	/**
 	 * Create the application.
 	 */
-	public app() {
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			connection=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","projetpoo","123");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+	public app() {	
 		
 		initialize();
 	}

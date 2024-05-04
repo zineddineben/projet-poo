@@ -51,14 +51,7 @@ public class signinpage {
 	 * Create the application.
 	 */
 	public signinpage() {
-		try {
-			
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			connection=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","projetpoo","123");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		
 		
 		initialize();

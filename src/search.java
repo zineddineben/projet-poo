@@ -180,11 +180,11 @@ public class search {
 		
 		
 	
-		String[] apartstring={"Studio","F1","F2","F3","F4","F5","duplex"};
-		String[] villastring={"R","R+1","R+2","R+3"};
+		final String[] apartstring={"Studio","F1","F2","F3","F4","F5","duplex"};
+		final String[] villastring={"R","R+1","R+2","R+3"};
 		
 		
-		JComboBox<String> size = new JComboBox<>();
+		final JComboBox<String> size = new JComboBox<>();
 
 		// size 3la hsab type
 		getappart.addActionListener(new ActionListener() {
