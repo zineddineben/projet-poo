@@ -12,6 +12,7 @@ import javax.swing.SwingConstants;
 //import javax.swing.BoxLayout;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 //import java.awt.SystemColor;
 import javax.swing.JPanel;
@@ -23,7 +24,7 @@ import java.awt.event.ActionEvent;
 //final boss test
 
 
-public class app {
+public class Login {
 	
 	
 
@@ -39,7 +40,7 @@ public class app {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					app window = new app();
+					Login window = new Login();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -51,7 +52,7 @@ public class app {
 	/**
 	 * Create the application.
 	 */
-	public app() {	
+	public Login() {	
 		
 		initialize();
 	}
@@ -65,7 +66,7 @@ public class app {
 		
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(173, 173, 230));
-		frame.setTitle("Omar immobilier");
+		frame.setTitle("Koldex immobilier");
 		frame.setFont(new Font("Segoe Print", Font.PLAIN, 12));
 		frame.setBounds(200, 100,window_height , window_width );
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -90,32 +91,33 @@ public class app {
 		halfwhite.add(username);
 		username.setColumns(10);
 		
+		
 		passwordField = new JPasswordField();
 		passwordField.setBounds(224, 248, 262, 37);
 		halfwhite.add(passwordField);
 		
-		JLabel enteruser = new JLabel("User name");
+		JLabel enteruser = new JLabel("Username");
 		enteruser.setHorizontalAlignment(SwingConstants.CENTER);
 		enteruser.setForeground(new Color(80, 88, 108));
 		enteruser.setFont(new Font("Impact", Font.PLAIN, 24));
 		enteruser.setBounds(67, 185, 131, 26);
 		halfwhite.add(enteruser);
 		
-		JLabel enterpass = new JLabel("password");
+		JLabel enterpass = new JLabel("Password");
 		enterpass.setHorizontalAlignment(SwingConstants.CENTER);
 		enterpass.setFont(new Font("Impact", Font.PLAIN, 24));
 		enterpass.setForeground(new Color(80, 88, 108));
 		enterpass.setBounds(67, 248, 131, 26);
 		halfwhite.add(enterpass);
 		
-		JLabel signintxt = new JLabel("dont have an account ? ");
+		JLabel signintxt = new JLabel("Don't have an account ?");
 		signintxt.setFont(new Font("Impact", Font.PLAIN, 15));
 		signintxt.setForeground(new Color(80, 88, 108));
 		signintxt.setBounds(234, 350, 153, 23);
 		halfwhite.add(signintxt);
 		
 		// dont have an accont sign in shit 
-		JButton signinbot = new JButton("sign in");
+		JButton signinbot = new JButton("Sign in");
 		signinbot.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
@@ -141,26 +143,42 @@ public class app {
 		logintitle.setBounds(141, 72, 404, 97);
 		halfwhite.add(logintitle);
 		
+		String user="ilyes12" ;
 		
+		String pass="123" ;
 		
-		JButton loginsucbot = new JButton("login");
-		loginsucbot.addActionListener(new ActionListener() {
+		JButton loginButton = new JButton("Login");
+		loginButton.addActionListener(new ActionListener() {
+	
+			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
-				
-				// ida makach error yroh llmenu 
-				frame.dispose();
-				menu  menu = new menu();				
-                menu.frame.setVisible(true);
-				
-			}
+		        if (username.getText().equals(user) && passwordField.getText().equals(pass)) {
+		            frame.dispose();
+		            menu   menu = new menu ();
+		            menu.frame.setVisible(true);
+		        }
+		        else if  (username.getText().equals("abdou") && passwordField.getText().equals("2005")){
+		        	frame.dispose();
+		        	Agent_menu  menu = new Agent_menu ();
+		            menu.frame.setVisible(true);
+		        }
+		        
+		        else {
+		        
+		        	loginerr   err = new loginerr ();
+		        	err.frame.setVisible(true);
+		        	username.setText("");
+		        	passwordField.setText("");
+		        }
+		    }
 		});
-		loginsucbot.setForeground(new Color(199, 208, 231));
-		loginsucbot.setBackground(new Color(80, 88, 108));
-		loginsucbot.setFont(new Font("Impact", Font.PLAIN, 20));
-		loginsucbot.setBounds(224, 310, 262, 37);
-		halfwhite.add(loginsucbot);
-		loginsucbot.setBorder(null);
-		loginsucbot.setFocusable(false);
+		loginButton.setForeground(new Color(199, 208, 231));
+		loginButton.setBackground(new Color(80, 88, 108));
+		loginButton.setFont(new Font("Impact", Font.PLAIN, 20));
+		loginButton.setBounds(224, 310, 262, 37);
+		halfwhite.add(loginButton);
+		loginButton.setBorder(null);
+		loginButton.setFocusable(false);
 		
 		JPanel halfcolor = new JPanel();
 		halfcolor.setBackground(new Color(80, 88, 108));
@@ -168,13 +186,27 @@ public class app {
 		blackback.add(halfcolor);
 		halfcolor.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Omar Immobilier");
-		lblNewLabel.setBounds(0, 85, 363, 120);
-		halfcolor.add(lblNewLabel);
-		lblNewLabel.setForeground(new Color(255, 255, 255));
-		lblNewLabel.setBackground(new Color(173, 173, 230));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Ink Free", Font.BOLD, 40));
+		JButton bot1 = new JButton("");
+		bot1.setBounds(10, 101, 344, 332);
+		halfcolor.add(bot1);		
+		bot1.setBackground(new Color(80, 88, 108));
+		bot1.setForeground(new Color(80, 88, 108));
+		bot1.setFont(new Font("Impact", Font.PLAIN, 20));
+		bot1.setBorder(null);
+		ImageIcon reqimg = new ImageIcon("KOLDEXCHIKOUR.png");
+		frame.setIconImage(reqimg.getImage());	
+		bot1.setIcon(reqimg);
+		bot1.setHorizontalTextPosition(JButton.CENTER);
+		bot1.setVerticalTextPosition(JButton.BOTTOM);
+		bot1.setFocusable(false);
+		bot1.setBorder(null);
+		halfcolor.add(bot1);
+		
+		ImageIcon logo = new ImageIcon("KOLDEXCHIKOUR.png");
+		frame.setIconImage(logo.getImage());
+		
+		
+	
 		
 		
 	}

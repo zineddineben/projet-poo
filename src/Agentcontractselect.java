@@ -5,26 +5,26 @@ import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.SwingConstants;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.border.BevelBorder;
+import javax.swing.JTextPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class agentappoint {
+public class Agentcontractselect {
 
 	JFrame frame;
 
 	/**
-	 * Launch the application. test
+	 * Launch the application.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					agentappoint window = new agentappoint();
+					Agentcontractselect window = new Agentcontractselect();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +36,7 @@ public class agentappoint {
 	/**
 	 * Create the application.
 	 */
-	public agentappoint() {
+	public Agentcontractselect() {
 		initialize();
 	}
 
@@ -44,11 +44,8 @@ public class agentappoint {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		int window_height=1000;
-		int window_width=600;
-		
 		frame = new JFrame();
-		frame.setBounds(100, 100, window_height, window_width);
+		frame.setBounds(100, 100, 1000, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setTitle("Koldex immobilier");
@@ -71,12 +68,12 @@ public class agentappoint {
 		panel_2.setBounds(0, 0, 964, 102);
 		panel_1.add(panel_2);
 		
-		JLabel lblAppointments = new JLabel("Appointments");
+		JLabel lblAppointments = new JLabel("Contracts");
 		lblAppointments.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAppointments.setForeground(new Color(199, 208, 231));
-		lblAppointments.setFont(new Font("Uni Sans Heavy CAPS", Font.BOLD, 67));
+		lblAppointments.setFont(new Font("Uni Sans Heavy CAPS", Font.BOLD, 70));
 		lblAppointments.setBackground(new Color(50, 72, 81));
-		lblAppointments.setBounds(0, 11, 964, 91);
+		lblAppointments.setBounds(0, 11, 964, 110);
 		panel_2.add(lblAppointments);
 		
 		JButton backmenu = new JButton("");
@@ -87,6 +84,8 @@ public class agentappoint {
 				main.frame.setVisible(true);
 			}
 		});
+		
+		
 		backmenu.setBackground(new Color(199, 208, 231));
 		backmenu.setBounds(10, 113, 54, 34);
 		panel_1.add(backmenu);
@@ -101,46 +100,55 @@ public class agentappoint {
 		panel_3.setLayout(null);
 		panel_3.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
 		panel_3.setBackground(new Color(199, 208, 231));
-		panel_3.setBounds(106, 161, 823, 69);
+		panel_3.setBounds(74, 129, 823, 194);
 		panel_1.add(panel_3);
 		
-		JLabel lblNewLabel = new JLabel("ilyes Sadmi");
-		lblNewLabel.setFont(new Font("Impact", Font.PLAIN, 17));
-		lblNewLabel.setBounds(264, 14, 141, 25);
+		JButton btnCiewContract = new JButton("view contract");
+		btnCiewContract.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				frame.dispose();
+				agentcontracts main = new agentcontracts(); 
+				main.frame.setVisible(true);
+				
+				
+			}
+		});
+		btnCiewContract.setFocusable(false);
+		btnCiewContract.setBounds(632, 138, 181, 45);
+		panel_3.add(btnCiewContract);
+		
+		JLabel lblNewLabel = new JLabel("Price : 40000000.00 DZD");
+		lblNewLabel.setFont(new Font("Impact", Font.PLAIN, 26));
+		lblNewLabel.setBounds(20, 11, 263, 33);
 		panel_3.add(lblNewLabel);
 		
-		JLabel lblSadmiilyesgmailcom = new JLabel("Sadmi.ilyes@gmail.com");
-		lblSadmiilyesgmailcom.setFont(new Font("Impact", Font.PLAIN, 17));
-		lblSadmiilyesgmailcom.setBounds(360, 14, 181, 25);
-		panel_3.add(lblSadmiilyesgmailcom);
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.setVerticalTextPosition(SwingConstants.BOTTOM);
+		btnNewButton_1.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnNewButton_1.setFocusable(false);
+		btnNewButton_1.setBorder(null);
+		btnNewButton_1.setBounds(634, 11, 179, 115);
+		panel_3.add(btnNewButton_1);
+		ImageIcon reqimg = new ImageIcon("dar2.png");
+		btnNewButton_1.setIcon(reqimg);
+		btnNewButton_1.setHorizontalTextPosition(JButton.CENTER);
+		btnNewButton_1.setVerticalTextPosition(JButton.BOTTOM);
+		btnNewButton_1.setFocusable(false);
+		btnNewButton_1.setBorder(null);
+		panel_3.add(btnNewButton_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("0621870389");
-		lblNewLabel_2.setFont(new Font("Impact", Font.PLAIN, 17));
-		lblNewLabel_2.setBounds(542, 14, 96, 25);
-		panel_3.add(lblNewLabel_2);
+		JTextPane txtpnTestTestTest = new JTextPane();
+		txtpnTestTestTest.setText("Description : \r\nVilla R+1 avec piscine \r\nPrix : 4milliards \r\nAdresse: Rue 08 Ali Amar - Alger");
+		txtpnTestTestTest.setFont(new Font("Impact", Font.PLAIN, 18));
+		txtpnTestTestTest.setEditable(false);
+		txtpnTestTestTest.setBackground(new Color(199, 208, 231));
+		txtpnTestTestTest.setBounds(20, 55, 447, 128);
+		panel_3.add(txtpnTestTestTest);
 		
-		JLabel lblNewLabel_1 = new JLabel("With :");
-		lblNewLabel_1.setForeground(new Color(80, 88, 108));
-		lblNewLabel_1.setFont(new Font("Impact", Font.PLAIN, 17));
-		lblNewLabel_1.setBounds(208, 19, 46, 14);
-		panel_3.add(lblNewLabel_1);
+		ImageIcon logo = new ImageIcon("KOLDEXCHIKOUR.png");
+		frame.setIconImage(logo.getImage());
 		
-	
-		
-		JLabel lblNewLabel_3 = new JLabel("25/05/2025");
-		lblNewLabel_3.setFont(new Font("Impact", Font.PLAIN, 18));
-		lblNewLabel_3.setBounds(85, 11, 113, 27);
-		panel_3.add(lblNewLabel_3);
-		
-		JLabel lblNewLabel_4 = new JLabel("Date :");
-		lblNewLabel_4.setForeground(new Color(80, 88, 108));
-		lblNewLabel_4.setFont(new Font("Impact", Font.PLAIN, 18));
-		lblNewLabel_4.setBounds(29, 11, 46, 25);
-		panel_3.add(lblNewLabel_4);
-		
-		JLabel lblNewLabel_5 = new JLabel(" Rue 08 Ali Amar - Alger");
-		lblNewLabel_5.setFont(new Font("Impact", Font.PLAIN, 18));
-		lblNewLabel_5.setBounds(639, 13, 174, 25);
-		panel_3.add(lblNewLabel_5);
 	}
 }

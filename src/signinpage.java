@@ -11,6 +11,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -70,7 +71,7 @@ public class signinpage {
 		signinframe.setBounds(100, 100, window_height, window_width);
 		signinframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		signinframe.getContentPane().setLayout(null);
-		
+		signinframe.setTitle("Koldex immobilier");
 		JPanel blackback = new JPanel();
 		blackback.setLayout(null);
 		blackback.setBorder(new BevelBorder(BevelBorder.RAISED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
@@ -93,21 +94,21 @@ public class signinpage {
 		passwordField.setBounds(224, 296, 262, 37);
 		halfwhite.add(passwordField);
 		
-		JLabel lblFirstName = new JLabel("first name");
+		JLabel lblFirstName = new JLabel("First name");
 		lblFirstName.setHorizontalAlignment(SwingConstants.CENTER);
 		lblFirstName.setForeground(new Color(80, 88, 108));
 		lblFirstName.setFont(new Font("Impact", Font.PLAIN, 24));
 		lblFirstName.setBounds(83, 135, 131, 26);
 		halfwhite.add(lblFirstName);
 		
-		JLabel enterpass = new JLabel("password");
+		JLabel enterpass = new JLabel("Password");
 		enterpass.setHorizontalAlignment(SwingConstants.CENTER);
 		enterpass.setForeground(new Color(80, 88, 108));
 		enterpass.setFont(new Font("Impact", Font.PLAIN, 24));
 		enterpass.setBounds(83, 300, 131, 26);
 		halfwhite.add(enterpass);
 		
-		JLabel lblAllreadyHaveAn = new JLabel("allready have an account ? ");
+		JLabel lblAllreadyHaveAn = new JLabel("already have an account ?");
 		lblAllreadyHaveAn.setForeground(new Color(80, 88, 108));
 		lblAllreadyHaveAn.setFont(new Font("Impact", Font.PLAIN, 15));
 		lblAllreadyHaveAn.setBounds(224, 500, 186, 23);
@@ -116,11 +117,11 @@ public class signinpage {
 		
 		
 		// 3endo compte 
-		JButton btnLogIn = new JButton("log in");
+		JButton btnLogIn = new JButton("Login");
 		btnLogIn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				signinframe.dispose();
-				app frmOmarImmobilier = new app();				
+				Login frmOmarImmobilier = new Login();				
 				frmOmarImmobilier.frame.setVisible(true);
 			}
 		});
@@ -143,7 +144,7 @@ public class signinpage {
 		
 		
 		// sign in 
-		JButton btnSignIn = new JButton("sign in");
+		JButton btnSignIn = new JButton("Sign in");
 		btnSignIn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -159,7 +160,7 @@ public class signinpage {
 					statement.execute(query);
 										
 					signinframe.dispose();
-					app frmOmarImmobilier = new app();
+					Login frmOmarImmobilier = new Login();
 					
 					frmOmarImmobilier.frame.setVisible(true);
 										
@@ -203,14 +204,14 @@ public class signinpage {
 		halfwhite.add(emailf);
 		emailf.setColumns(10);
 		
-		JLabel lblNewLabel_1 = new JLabel("last name");
+		JLabel lblNewLabel_1 = new JLabel("Last name");
 		lblNewLabel_1.setForeground(new Color(80, 88, 108));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setFont(new Font("Impact", Font.PLAIN, 24));
 		lblNewLabel_1.setBounds(83, 190, 131, 26);
 		halfwhite.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("user name");
+		JLabel lblNewLabel_2 = new JLabel("Username");
 		lblNewLabel_2.setForeground(new Color(80, 88, 108));
 		lblNewLabel_2.setFont(new Font("Impact", Font.PLAIN, 24));
 		lblNewLabel_2.setBackground(new Color(80, 88, 108));
@@ -218,13 +219,13 @@ public class signinpage {
 		lblNewLabel_2.setBounds(83, 245, 131, 26);
 		halfwhite.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_3 = new JLabel("phone number");
+		JLabel lblNewLabel_3 = new JLabel("Phone number");
 		lblNewLabel_3.setFont(new Font("Impact", Font.PLAIN, 22));
 		lblNewLabel_3.setForeground(new Color(80, 88, 108));
 		lblNewLabel_3.setBounds(83, 355, 144, 26);
 		halfwhite.add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_4 = new JLabel("email");
+		JLabel lblNewLabel_4 = new JLabel("Email");
 		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_4.setFont(new Font("Impact", Font.PLAIN, 24));
 		lblNewLabel_4.setForeground(new Color(80, 88, 108));
@@ -239,12 +240,21 @@ public class signinpage {
 		halfcolor.setBounds(10, 11, 364, 539);
 		blackback.add(halfcolor);
 		
-		JLabel lblNewLabel = new JLabel("Omar Immobilier");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setForeground(Color.WHITE);
-		lblNewLabel.setFont(new Font("Ink Free", Font.BOLD, 40));
-		lblNewLabel.setBackground(new Color(173, 173, 230));
-		lblNewLabel.setBounds(0, 85, 363, 120);
-		halfcolor.add(lblNewLabel);
+		ImageIcon logo = new ImageIcon("KOLDEXCHIKOUR.png");
+		
+		JButton bot1 = new JButton("");
+		bot1.setBounds(10, 101, 344, 332);
+		halfcolor.add(bot1);		
+		bot1.setBackground(new Color(80, 88, 108));
+		bot1.setForeground(new Color(80, 88, 108));
+		bot1.setFont(new Font("Impact", Font.PLAIN, 20));
+		bot1.setBorder(null);
+		bot1.setIcon(logo);
+		bot1.setHorizontalTextPosition(JButton.CENTER);
+		bot1.setVerticalTextPosition(JButton.BOTTOM);
+		bot1.setFocusable(false);
+		bot1.setBorder(null);
+		halfcolor.add(bot1);
+		
 	}
 }

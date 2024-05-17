@@ -2,6 +2,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -13,18 +14,18 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.border.BevelBorder;
 
-public class agentappoint {
+public class apprequest {
 
 	JFrame frame;
 
 	/**
-	 * Launch the application. test
+	 * Launch the application.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					agentappoint window = new agentappoint();
+					apprequest window = new apprequest();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +37,7 @@ public class agentappoint {
 	/**
 	 * Create the application.
 	 */
-	public agentappoint() {
+	public apprequest() {
 		initialize();
 	}
 
@@ -71,13 +72,46 @@ public class agentappoint {
 		panel_2.setBounds(0, 0, 964, 102);
 		panel_1.add(panel_2);
 		
-		JLabel lblAppointments = new JLabel("Appointments");
-		lblAppointments.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAppointments.setForeground(new Color(199, 208, 231));
-		lblAppointments.setFont(new Font("Uni Sans Heavy CAPS", Font.BOLD, 67));
-		lblAppointments.setBackground(new Color(50, 72, 81));
-		lblAppointments.setBounds(0, 11, 964, 91);
-		panel_2.add(lblAppointments);
+		JLabel lblAppointmentRequests = new JLabel("appointment requests ");
+		lblAppointmentRequests.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAppointmentRequests.setForeground(new Color(199, 208, 231));
+		lblAppointmentRequests.setFont(new Font("Uni Sans Heavy CAPS", Font.PLAIN, 58));
+		lblAppointmentRequests.setBackground(new Color(50, 72, 81));
+		lblAppointmentRequests.setBounds(0, 0, 964, 125);
+		panel_2.add(lblAppointmentRequests);
+		
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setLayout(null);
+		panel_3.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
+		panel_3.setBackground(new Color(199, 208, 231));
+		panel_3.setBounds(97, 134, 823, 170);
+		panel_1.add(panel_3);
+		
+		JButton btnNewButton = new JButton("accept request");
+		btnNewButton.setFocusable(false);
+		btnNewButton.setBounds(634, 116, 181, 45);
+		panel_3.add(btnNewButton);
+		
+		JLabel lblNewLabel = new JLabel("Ilyes Sadmi");
+		lblNewLabel.setFont(new Font("Impact", Font.PLAIN, 17));
+		lblNewLabel.setBounds(79, 58, 96, 25);
+		panel_3.add(lblNewLabel);
+		
+		JLabel lblSadmiilyesgmailcom = new JLabel("Sadmi.ilyes@gmail.com");
+		lblSadmiilyesgmailcom.setFont(new Font("Impact", Font.PLAIN, 17));
+		lblSadmiilyesgmailcom.setBounds(79, 87, 181, 25);
+		panel_3.add(lblSadmiilyesgmailcom);
+		
+		JLabel lblNewLabel_2 = new JLabel("0621870389");
+		lblNewLabel_2.setFont(new Font("Impact", Font.PLAIN, 17));
+		lblNewLabel_2.setBounds(79, 116, 96, 25);
+		panel_3.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_1 = new JLabel("From :");
+		lblNewLabel_1.setFont(new Font("Impact", Font.PLAIN, 17));
+		lblNewLabel_1.setBounds(23, 63, 46, 14);
+		panel_3.add(lblNewLabel_1);
 		
 		JButton backmenu = new JButton("");
 		backmenu.addActionListener(new ActionListener() {
@@ -97,50 +131,30 @@ public class agentappoint {
 		backmenu.setFocusable(false);
 		backmenu.setBorder(null);
 		
-		JPanel panel_3 = new JPanel();
-		panel_3.setLayout(null);
-		panel_3.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
-		panel_3.setBackground(new Color(199, 208, 231));
-		panel_3.setBounds(106, 161, 823, 69);
-		panel_1.add(panel_3);
-		
-		JLabel lblNewLabel = new JLabel("ilyes Sadmi");
-		lblNewLabel.setFont(new Font("Impact", Font.PLAIN, 17));
-		lblNewLabel.setBounds(264, 14, 141, 25);
-		panel_3.add(lblNewLabel);
-		
-		JLabel lblSadmiilyesgmailcom = new JLabel("Sadmi.ilyes@gmail.com");
-		lblSadmiilyesgmailcom.setFont(new Font("Impact", Font.PLAIN, 17));
-		lblSadmiilyesgmailcom.setBounds(360, 14, 181, 25);
-		panel_3.add(lblSadmiilyesgmailcom);
-		
-		JLabel lblNewLabel_2 = new JLabel("0621870389");
-		lblNewLabel_2.setFont(new Font("Impact", Font.PLAIN, 17));
-		lblNewLabel_2.setBounds(542, 14, 96, 25);
-		panel_3.add(lblNewLabel_2);
-		
-		JLabel lblNewLabel_1 = new JLabel("With :");
-		lblNewLabel_1.setForeground(new Color(80, 88, 108));
-		lblNewLabel_1.setFont(new Font("Impact", Font.PLAIN, 17));
-		lblNewLabel_1.setBounds(208, 19, 46, 14);
-		panel_3.add(lblNewLabel_1);
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.setBounds(634, 11, 179, 101);
 		
 	
+		ImageIcon reqimg = new ImageIcon("dar2.png");
+		btnNewButton_1.setIcon(reqimg);
+		btnNewButton_1.setHorizontalTextPosition(JButton.CENTER);
+		btnNewButton_1.setVerticalTextPosition(JButton.BOTTOM);
+		btnNewButton_1.setFocusable(false);
+		btnNewButton_1.setBorder(null);
+		panel_3.add(btnNewButton_1);
 		
-		JLabel lblNewLabel_3 = new JLabel("25/05/2025");
+		JLabel lblNewLabel_3 = new JLabel("Date :");
 		lblNewLabel_3.setFont(new Font("Impact", Font.PLAIN, 18));
-		lblNewLabel_3.setBounds(85, 11, 113, 27);
+		lblNewLabel_3.setBounds(23, 22, 46, 25);
 		panel_3.add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_4 = new JLabel("Date :");
-		lblNewLabel_4.setForeground(new Color(80, 88, 108));
+		JLabel lblNewLabel_4 = new JLabel("25/05/2024");
 		lblNewLabel_4.setFont(new Font("Impact", Font.PLAIN, 18));
-		lblNewLabel_4.setBounds(29, 11, 46, 25);
+		lblNewLabel_4.setBounds(79, 22, 134, 25);
 		panel_3.add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel(" Rue 08 Ali Amar - Alger");
-		lblNewLabel_5.setFont(new Font("Impact", Font.PLAIN, 18));
-		lblNewLabel_5.setBounds(639, 13, 174, 25);
-		panel_3.add(lblNewLabel_5);
+		ImageIcon logo = new ImageIcon("KOLDEXCHIKOUR.png");
+		frame.setIconImage(logo.getImage());
 	}
+
 }

@@ -13,7 +13,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class sell_rent {
+public class Agent_menu {
 
 	public JFrame frame;
 
@@ -24,7 +24,7 @@ public class sell_rent {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					sell_rent window = new sell_rent();
+					Agent_menu window = new Agent_menu();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +36,7 @@ public class sell_rent {
 	/**
 	 * Create the application.
 	 */
-	public sell_rent() {
+	public Agent_menu() {
 		initialize();
 	}
 
@@ -51,9 +51,13 @@ public class sell_rent {
 		
 		
 		frame = new JFrame();
+		frame.setResizable(false);
 		frame.setBounds(100, 100, window_height, window_width);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setTitle("Koldex immobilier");
+		ImageIcon logo = new ImageIcon("KOLDEXCHIKOUR.png");
+		frame.setIconImage(logo.getImage());
 		
 		JPanel panel = new JPanel();
 		panel.setLayout(null);
@@ -77,9 +81,9 @@ public class sell_rent {
 		JLabel lblNewLabel = new JLabel("Main menu");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setForeground(new Color(199, 208, 231));
-		lblNewLabel.setFont(new Font("Ink Free", Font.BOLD, 70));
+		lblNewLabel.setFont(new Font("Uni Sans Heavy CAPS", Font.BOLD, 70));
 		lblNewLabel.setBackground(new Color(50, 72, 81));
-		lblNewLabel.setBounds(0, 0, 964, 102);
+		lblNewLabel.setBounds(0, 27, 964, 95);
 		panel_2.add(lblNewLabel);
 		
 		JButton bot1 = new JButton("My account");
@@ -103,7 +107,15 @@ public class sell_rent {
 		bot1.setHorizontalTextPosition(JButton.CENTER);
 		bot1.setVerticalTextPosition(JButton.BOTTOM);
 		
-		JButton bot2 = new JButton("appointment requests ");
+		JButton bot2 = new JButton("Appointment Requests ");
+		bot2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				apprequest appreq = new apprequest(); 
+				appreq.frame.setVisible(true);
+				
+			}
+		});
 		bot2.setVerticalTextPosition(SwingConstants.BOTTOM);
 		bot2.setHorizontalTextPosition(SwingConstants.CENTER);
 		bot2.setForeground(new Color(80, 88, 108));
@@ -118,7 +130,15 @@ public class sell_rent {
 		bot2.setVerticalTextPosition(JButton.BOTTOM);
 		panel_1.add(bot2);
 		
-		JButton bot3 = new JButton("contracts");
+		JButton bot3 = new JButton("Contracts");
+		bot3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				frame.dispose();
+				Agentcontractselect main = new Agentcontractselect(); 
+				main.frame.setVisible(true);
+			}
+		});
 		bot3.setVerticalTextPosition(SwingConstants.BOTTOM);
 		bot3.setHorizontalTextPosition(SwingConstants.CENTER);
 		bot3.setForeground(new Color(80, 88, 108));
@@ -161,7 +181,7 @@ public class sell_rent {
 				
 
 				frame.dispose();
-				app login = new app(); 
+				Login login = new Login(); 
 				login.frame.setVisible(true);
 				
 				

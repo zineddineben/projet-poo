@@ -52,7 +52,7 @@ public class transactions_tap {
 		frame.setBounds(100, 100, window_height, window_width);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+		frame.setTitle("Koldex immobilier");
 		JPanel panel = new JPanel();
 		panel.setLayout(null);
 		panel.setBackground(Color.BLACK);
@@ -75,17 +75,20 @@ public class transactions_tap {
 		JLabel lblTransactions = new JLabel("Transactions");
 		lblTransactions.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTransactions.setForeground(new Color(199, 208, 231));
-		lblTransactions.setFont(new Font("Ink Free", Font.BOLD, 70));
+		lblTransactions.setFont(new Font("Uni Sans Heavy CAPS", Font.BOLD, 66));
 		lblTransactions.setBackground(new Color(50, 72, 81));
-		lblTransactions.setBounds(0, 0, 964, 102);
+		lblTransactions.setBounds(0, 0, 964, 115);
 		panel_2.add(lblTransactions);
 		
-		JButton bot1 = new JButton("Echeance ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎");
+		JButton bot1 = new JButton("Due date");
 		bot1.setHorizontalTextPosition(SwingConstants.LEADING);
 		bot1.setHorizontalAlignment(SwingConstants.LEADING);
 		bot1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				frame.dispose();
+				echeance main = new echeance(); 
+				main.frame.setVisible(true);
 				
 			}
 		});
@@ -101,6 +104,15 @@ public class transactions_tap {
 		bot1.setVerticalTextPosition(JButton.CENTER);
 		
 		JButton btnPayment = new JButton("Payment‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‏‏‎  ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ");
+		btnPayment.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				frame.dispose();
+				payment main = new payment(); 
+				main.frame.setVisible(true);
+				
+			}
+		});
 		btnPayment.setVerticalTextPosition(SwingConstants.CENTER);
 		btnPayment.setHorizontalTextPosition(SwingConstants.LEADING);
 		btnPayment.setHorizontalAlignment(SwingConstants.LEADING);
@@ -116,13 +128,21 @@ public class transactions_tap {
 		btnPayment.setVerticalTextPosition(JButton.CENTER);
 		
 		JButton btnContract = new JButton("Contract‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‏‏‎  ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ");
+		btnContract.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				clientcontrat main = new clientcontrat(); 
+				main.frame.setVisible(true);
+				
+			}
+		});
 		btnContract.setVerticalTextPosition(SwingConstants.CENTER);
 		btnContract.setHorizontalTextPosition(SwingConstants.LEADING);
 		btnContract.setHorizontalAlignment(SwingConstants.LEADING);
 		btnContract.setForeground(new Color(80, 88, 108));
 		btnContract.setFont(new Font("Impact", Font.PLAIN, 25));
 		btnContract.setFocusable(false);
-		//btnContract.setBorder(null);
+		
 		btnContract.setBackground(new Color(255, 255, 255));
 		btnContract.setBounds(340, 391, 363, 116);
 		panel_1.add(btnContract);
@@ -147,5 +167,8 @@ public class transactions_tap {
 		backmenu.setVerticalTextPosition(JButton.BOTTOM);
 		backmenu.setFocusable(false);
 		backmenu.setBorder(null);
+		
+		ImageIcon logo = new ImageIcon("KOLDEXCHIKOUR.png");
+		frame.setIconImage(logo.getImage());
 	}
 }

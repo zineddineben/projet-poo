@@ -1,5 +1,4 @@
 
-
 import java.awt.EventQueue;
 
 
@@ -65,7 +64,7 @@ public class search {
 		frame.setBounds(100, 100, window_height, window_width);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+		frame.setTitle("Koldex immobilier");
 		JPanel panel = new JPanel();
 		panel.setLayout(null);
 		panel.setBackground(Color.BLACK);
@@ -88,9 +87,9 @@ public class search {
 		JLabel lblSearch = new JLabel("Search");
 		lblSearch.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSearch.setForeground(new Color(199, 208, 231));
-		lblSearch.setFont(new Font("Ink Free", Font.BOLD, 70));
+		lblSearch.setFont(new Font("Uni Sans Heavy CAPS", Font.BOLD, 67));
 		lblSearch.setBackground(new Color(50, 72, 81));
-		lblSearch.setBounds(0, 0, 964, 102);
+		lblSearch.setBounds(0, 0, 964, 125);
 		panel_2.add(lblSearch);
 		
 		JLabel lblSize = new JLabel("Maximum price :");
@@ -166,7 +165,7 @@ public class search {
 		panel_1.add(getappart);
 		getappart.setFocusable(false);
 		
-		JRadioButton getvilla = new JRadioButton("villa");
+		JRadioButton getvilla = new JRadioButton("Villa");
 		getvilla.setForeground(new Color(80, 88, 108));
 		getvilla.setFont(new Font("Impact", Font.PLAIN, 18));
 		getvilla.setBackground(new Color(199, 208, 231));
@@ -269,6 +268,15 @@ public class search {
 		getgarden.setFocusable(false);
 		
 		JButton searchrs = new JButton("Search");
+		searchrs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				frame.dispose();
+				searchres res = new searchres(); 
+				res.frame.setVisible(true);
+				
+			}
+		});
 		searchrs.setFont(new Font("Impact", Font.PLAIN, 39));
 		searchrs.setForeground(new Color(199, 208, 231));
 		searchrs.setBackground(new Color(80, 88, 108));
@@ -306,6 +314,9 @@ public class search {
 		backmenu.setVerticalTextPosition(JButton.BOTTOM);
 		backmenu.setFocusable(false);
 		backmenu.setBorder(null);
+		
+		ImageIcon logo = new ImageIcon("KOLDEXCHIKOUR.png");
+		frame.setIconImage(logo.getImage());
 		
 		
 

@@ -56,7 +56,7 @@ public class menu {
 		frame.setBounds(100, 100, window_height, window_width);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+		frame.setTitle("Koldex immobilier");
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(0, 0, 0));
 		panel.setBounds(0, 0, 984, 561);
@@ -80,8 +80,8 @@ public class menu {
 		lblNewLabel.setBackground(new Color(50, 72, 81));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setForeground(new Color(199, 208, 231));
-		lblNewLabel.setFont(new Font("Ink Free", Font.BOLD, 70));
-		lblNewLabel.setBounds(0, 0, 964, 102);
+		lblNewLabel.setFont(new Font("Uni Sans Heavy CAPS", Font.BOLD, 70));
+		lblNewLabel.setBounds(0, 22, 964, 80);
 		panel_2.add(lblNewLabel);
 		
 		JButton bot1 = new JButton("My account");
@@ -152,7 +152,7 @@ public class menu {
 		bot3.setVerticalTextPosition(JButton.BOTTOM);
 		panel_1.add(bot3);
 		
-		JButton bot4 = new JButton("pending requests");
+		JButton bot4 = new JButton("Pending requests");
 		bot4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -177,7 +177,7 @@ public class menu {
 		bot4.setVerticalTextPosition(JButton.BOTTOM);
 		panel_1.add(bot4);
 		
-		JButton bot5 = new JButton("transaction");
+		JButton bot5 = new JButton("Transactions");
 		bot5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -212,7 +212,7 @@ public class menu {
 				
 
 				frame.dispose();
-				app login = new app(); 
+				Login login = new Login(); 
 				login.frame.setVisible(true);
 				
 				
@@ -232,6 +232,9 @@ public class menu {
 		bot6.setHorizontalTextPosition(JButton.CENTER);
 		bot6.setVerticalTextPosition(JButton.BOTTOM);
 		panel_1.add(bot6);
+		
+		ImageIcon logo = new ImageIcon("KOLDEXCHIKOUR.png");
+		frame.setIconImage(logo.getImage());
 		
 	}
 }

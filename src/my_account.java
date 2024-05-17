@@ -1,5 +1,6 @@
 import java.awt.EventQueue;
 
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 //import java.awt.BorderLayout;
@@ -20,6 +21,7 @@ import javax.swing.JTextPane;
 public class my_account {
 
 	JFrame frame;
+	
 
 	/**
 	 * Launch the application.
@@ -55,7 +57,7 @@ public class my_account {
 		frame.setBounds(100, 100, window_height, window_width);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+		frame.setTitle("Koldex immobilier");
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 984, 561);
 		panel.setBackground(Color.BLACK);
@@ -76,10 +78,10 @@ public class my_account {
 		panel_2.setLayout(null);
 		
 		JLabel lblMyAccount = new JLabel("My account");
-		lblMyAccount.setBounds(0, 0, 964, 102);
+		lblMyAccount.setBounds(0, 0, 964, 121);
 		lblMyAccount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblMyAccount.setForeground(new Color(199, 208, 231));
-		lblMyAccount.setFont(new Font("Ink Free", Font.BOLD, 70));
+		lblMyAccount.setFont(new Font("Uni Sans Heavy CAPS", Font.BOLD, 65));
 		lblMyAccount.setBackground(new Color(50, 72, 81));
 		panel_2.add(lblMyAccount);
 		
@@ -101,34 +103,34 @@ public class my_account {
 		backmenu.setFocusable(false);
 		backmenu.setBorder(null);
 		
-		JLabel lblFirstName = new JLabel("first name :");
+		JLabel lblFirstName = new JLabel("First Name:");
 		lblFirstName.setHorizontalAlignment(SwingConstants.TRAILING);
 		lblFirstName.setForeground(new Color(80, 88, 108));
 		lblFirstName.setFont(new Font("Impact", Font.PLAIN, 24));
 		lblFirstName.setBounds(340, 141, 131, 26);
 		panel_1.add(lblFirstName);
 		
-		JLabel lblNewLabel_1 = new JLabel("last name :");
+		JLabel lblNewLabel_1 = new JLabel("Last Name :");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.TRAILING);
 		lblNewLabel_1.setForeground(new Color(80, 88, 108));
 		lblNewLabel_1.setFont(new Font("Impact", Font.PLAIN, 24));
 		lblNewLabel_1.setBounds(340, 191, 131, 26);
 		panel_1.add(lblNewLabel_1);
 		
-		JLabel lblPassword = new JLabel("password :");
+		JLabel lblPassword = new JLabel("Password :");
 		lblPassword.setHorizontalAlignment(SwingConstants.TRAILING);
 		lblPassword.setForeground(new Color(80, 88, 108));
 		lblPassword.setFont(new Font("Impact", Font.PLAIN, 24));
 		lblPassword.setBounds(340, 291, 131, 26);
 		panel_1.add(lblPassword);
 		
-		JLabel lblNewLabel_3 = new JLabel("phone number :");
+		JLabel lblNewLabel_3 = new JLabel("Phone number :");
 		lblNewLabel_3.setForeground(new Color(80, 88, 108));
 		lblNewLabel_3.setFont(new Font("Impact", Font.PLAIN, 22));
 		lblNewLabel_3.setBounds(327, 341, 144, 26);
 		panel_1.add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_4 = new JLabel("email :");
+		JLabel lblNewLabel_4 = new JLabel("Email :");
 		lblNewLabel_4.setHorizontalAlignment(SwingConstants.TRAILING);
 		lblNewLabel_4.setForeground(new Color(80, 88, 108));
 		lblNewLabel_4.setFont(new Font("Impact", Font.PLAIN, 24));
@@ -137,37 +139,38 @@ public class my_account {
 		
 		JTextPane editfirst = new JTextPane();
 		editfirst.setFont(new Font("Impact", Font.PLAIN, 16));
-		editfirst.setText("getfname");
-		editfirst.setBounds(484, 143, 151, 26);
+		
+		editfirst.setText("Ilyes");
+		editfirst.setBounds(484, 143, 181, 26);
 		panel_1.add(editfirst);
 		
 		JTextPane editlast = new JTextPane();
-		editlast.setText("getlname");
+		editlast.setText("Sadmi");
 		editlast.setFont(new Font("Impact", Font.PLAIN, 16));
-		editlast.setBounds(484, 193, 151, 26);
+		editlast.setBounds(484, 193, 181, 26);
 		panel_1.add(editlast);
 		
 		JTextPane txtpnQeqeweqwe_2 = new JTextPane();
 		txtpnQeqeweqwe_2.setForeground(new Color(126, 126, 126));
 		txtpnQeqeweqwe_2.setEditable(false);
-		txtpnQeqeweqwe_2.setText("getuser");
+		txtpnQeqeweqwe_2.setText("ilyes12");
 		txtpnQeqeweqwe_2.setFont(new Font("Impact", Font.PLAIN, 16));
-		txtpnQeqeweqwe_2.setBounds(484, 243, 151, 26);
+		txtpnQeqeweqwe_2.setBounds(484, 243, 181, 26);
 		panel_1.add(txtpnQeqeweqwe_2);
 		
 		JTextPane editphone = new JTextPane();
-		editphone.setText("getphone");
+		editphone.setText("0621870389");
 		editphone.setFont(new Font("Impact", Font.PLAIN, 16));
-		editphone.setBounds(484, 343, 151, 26);
+		editphone.setBounds(484, 343, 181, 26);
 		panel_1.add(editphone);
 		
 		JTextPane editmail = new JTextPane();
-		editmail.setText("getemail");
+		editmail.setText("Sadmi.ilyes@gmail.com");
 		editmail.setFont(new Font("Impact", Font.PLAIN, 16));
-		editmail.setBounds(484, 393, 151, 26);
+		editmail.setBounds(484, 393, 181, 26);
 		panel_1.add(editmail);
 		
-		JLabel lblNewLabel_2 = new JLabel("user name :");
+		JLabel lblNewLabel_2 = new JLabel("Username :");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.TRAILING);
 		lblNewLabel_2.setForeground(new Color(80, 88, 108));
 		lblNewLabel_2.setFont(new Font("Impact", Font.PLAIN, 24));
@@ -176,12 +179,20 @@ public class my_account {
 		panel_1.add(lblNewLabel_2);
 		
 		JTextPane editpass = new JTextPane();
-		editpass.setText("getpass");
+		editpass.setForeground(new Color(126, 126, 126));
+		editpass.setEditable(false);
+		editpass.setText("123");
 		editpass.setFont(new Font("Impact", Font.PLAIN, 16));
-		editpass.setBounds(484, 293, 151, 26);
+		editpass.setBounds(484, 293, 181, 26);
 		panel_1.add(editpass);
 		
-		JButton save = new JButton("save changes");
+		JButton save = new JButton("Save changes");
+		save.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+		});
 		save.setFont(new Font("Impact", Font.PLAIN, 24));
 		save.setBackground(new Color(80, 88, 108));
 		save.setForeground(new Color(199, 208, 231));
@@ -190,7 +201,7 @@ public class my_account {
 		save.setBorder(null);
 		save.setFocusable(false);
 		
-		JButton reset = new JButton("reset");
+		JButton reset = new JButton("Reset");
 		reset.setForeground(new Color(199, 208, 231));
 		reset.setFont(new Font("Impact", Font.PLAIN, 24));
 		reset.setFocusable(false);
@@ -198,6 +209,9 @@ public class my_account {
 		reset.setBackground(new Color(80, 88, 108));
 		reset.setBounds(320, 440, 151, 50);
 		panel_1.add(reset);
+		
+		ImageIcon logo = new ImageIcon("KOLDEXCHIKOUR.png");
+		frame.setIconImage(logo.getImage());
 		
 		
 		
