@@ -80,7 +80,7 @@ public class transactions_tap {
 		lblTransactions.setBounds(0, 0, 964, 115);
 		panel_2.add(lblTransactions);
 		
-		JButton bot1 = new JButton("Due date");
+		JButton bot1 = new JButton("Due date‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ");
 		bot1.setHorizontalTextPosition(SwingConstants.LEADING);
 		bot1.setHorizontalAlignment(SwingConstants.LEADING);
 		bot1.addActionListener(new ActionListener() {
